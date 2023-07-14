@@ -38,7 +38,7 @@ object TTSUtil : TextToSpeech.OnInitListener {
                 setResetSpeak()
             } else {
                 val context = appContext ?: return
-                createNotificationChannel(context, "tts", "TTS引擎下载")
+                createNotificationChannel(context, "tts", "TTS引擎异常提醒")
                 if (isAppInstalled(context, "com.iflytek.speechcloud")) {
                     settingsNotice()
                 } else {
@@ -47,7 +47,7 @@ object TTSUtil : TextToSpeech.OnInitListener {
             }
         } else {
             val context = appContext ?: return
-            createNotificationChannel(context, "tts", "TTS引擎下载")
+            createNotificationChannel(context, "tts", "TTS引擎异常提醒")
             downloadApkNotice("系统TTS引擎异常，请更换或下载其他引擎。\n点击下载TTS引擎，安装完成之后需要在手机设置里搜索TTS(文字转语音)更换【系统语音】为首选引擎，设置完成之后重启App即可正常使用")
         }
     }
