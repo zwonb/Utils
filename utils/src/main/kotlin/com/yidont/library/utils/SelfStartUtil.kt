@@ -1,3 +1,5 @@
+@file:JvmName("SelfStartUtil")
+
 package com.yidont.library.utils
 
 import android.content.ComponentName

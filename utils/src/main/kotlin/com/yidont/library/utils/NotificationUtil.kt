@@ -1,3 +1,5 @@
+@file:JvmName("NotificationUtil")
+
 package com.yidont.library.utils
 
 import android.app.Notification
