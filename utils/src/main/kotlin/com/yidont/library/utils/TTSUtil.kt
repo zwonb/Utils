@@ -1,5 +1,3 @@
-@file:JvmName("TTSUtilKt")
-
 package com.yidont.library.utils
 
 import android.app.NotificationManager

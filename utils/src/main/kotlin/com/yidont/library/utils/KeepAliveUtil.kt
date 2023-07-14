@@ -1,5 +1,3 @@
-@file:JvmName("KeepAliveUtil")
-
 package com.yidont.library.utils
 
 import android.annotation.SuppressLint
@@ -16,8 +14,7 @@ object KeepAliveUtil {
 
     private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO)
     private var wakeLock: PowerManager.WakeLock? = null
-
-    //    private var wifiLock: WifiManager.WifiLock? = null
+//    private var wifiLock: WifiManager.WifiLock? = null
     private var player: MediaPlayer? = null
 
     fun init(appContext: Context) {
@@ -142,3 +139,33 @@ object KeepAliveUtil {
 //    }
 //}
 
+//class SelfStartingWork(val context: Context, workerParams: WorkerParameters) :
+//    Worker(context, workerParams) {
+//    override fun doWork(): Result {
+//        return Result.success()
+//    }
+//}
+
+//fun startSelfStartWork() {
+//    val request = PeriodicWorkRequestBuilder<SelfStartingWork>(
+//        PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS,
+//        TimeUnit.MILLISECONDS
+//    ).setInitialDelay(10, TimeUnit.SECONDS)
+//        .setConstraints(Constraints.Builder().setRequiresBatteryNotLow(false).build())
+//        .build()
+//    WorkManager.getInstance(appContext).enqueueUniquePeriodicWork(
+//        "selfStart",
+//        ExistingPeriodicWorkPolicy.CANCEL_AND_REENQUEUE,
+//        request
+//    )
+//}
+
+//fun startAlive() {
+//    startSelfStartWork()
+//    ForegroundService.startService(appContext)
+//    runBlocking {
+//        if (getKeepAliveType() == 2) {
+//            KeepAlive.init()
+//        }
+//    }
+//}

@@ -1,5 +1,3 @@
-@file:JvmName("RomUtil")
-
 package com.yidont.library.utils
 
 

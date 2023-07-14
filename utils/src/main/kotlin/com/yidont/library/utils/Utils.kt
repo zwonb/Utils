@@ -1,5 +1,3 @@
-@file:JvmName("Utils")
-
 package com.yidont.library.utils
 
 import android.annotation.SuppressLint
