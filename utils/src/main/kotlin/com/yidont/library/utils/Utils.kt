@@ -167,3 +167,14 @@ fun setWifiEnabled(context: Context, enabled: Boolean) {
 }
 
 fun numberAdd0(number: Int) = if (number < 10) "0$number" else number.toString()
+
+@Suppress("DEPRECATION")
+fun getAppVersion(context: Context): Int {
+    val pm = context.packageManager
+    val pi = pm.getPackageInfo(context.packageName, 0)
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+        pi.longVersionCode.toInt()
+    } else {
+        pi.versionCode
+    }
+}
