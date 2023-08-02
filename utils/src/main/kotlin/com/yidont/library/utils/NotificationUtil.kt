@@ -93,6 +93,7 @@ fun notifyBase(
         .setContentTitle(title)
         .setContentText(text)
         .setStyle(style)
+        .setCategory(Notification.CATEGORY_REMINDER)
         .build()
 
     val manager = context.getSystemService(NotificationManager::class.java)
